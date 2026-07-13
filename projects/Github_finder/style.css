@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0d1117;
+    color: white;
+}
+
+/* Center everything */
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Card */
+
+.container {
+    width: 430px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .45);
+    text-align: center;
+}
+
+/* Heading */
+
+.container h2 {
+    margin-bottom: 25px;
+    color: #58a6ff;
+}
+
+/* Search */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #21262d;
+    color: white;
+    font-size: 16px;
+}
+
+.search-box input::placeholder {
+    color: #8b949e;
+}
+
+/* Button */
+
+button {
+    padding: 0 22px;
+    border: none;
+    border-radius: 10px;
+    background: #238636;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:hover {
+    background: #2ea043;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(46, 160, 67, .3);
+}
+
+button:active {
+    transform: scale(.96);
+}
+
+/* Avatar */
+
+.image {
+    margin: 25px 0;
+}
+
+.image img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #58a6ff;
+    background: white;
+}
+
+/* Name */
+
+#name {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+/* Info Cards */
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: #21262d;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    color: #8b949e;
+    margin-bottom: 10px;
+}
+
+#followers {
+    color: #3fb950;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#bio {
+    color: #f2cc60;
+    font-size: 17px;
+    line-height: 1.5;
+}

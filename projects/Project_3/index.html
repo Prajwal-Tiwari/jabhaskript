@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Do not touch button</h1>
+    <button id="no">DO NOT TOUCH</button>
+</body>
+<script>
+    const sayMyname = ()=>{
+        console.log("Prajwal Tiwari");
+    }
+    let timer = null;
+    document.querySelector("#no").addEventListener('click', (e)=>{
+        if(timer){
+            console.log("timer already exists");
+            clearTimeout(timer);
+            timer = null;
+            console.log("But, nothing will change, as timer is stopped in-between execution");
+            return;
+        }
+        console.log("timer started");
+        timer = setTimeout(()=>{
+            document.querySelector('#heading').innerHTML = "You are not fast enough";
+            timer = null;
+            console.log("Change executed");
+        }, 200)
+    })
+
+    // document.querySelector('#no').addEventListener('click', (e)=>{
+    //     console.log("button clicked");
+    //     const changehdr = setTimeout(() => {
+    //         document.querySelector('h1').innerHTML = "My name is Prajwal Tiwari";
+    //     }, 2000);
+    // })
+
+    sayMyname()
+</script>
+</html>

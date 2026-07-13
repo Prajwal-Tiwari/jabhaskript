@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">Do not touch button</h1>
+    <button id="yes">Touch it</button>
+    <button id="no">DO NOT TOUCH</button>
+</body>
+<script>
+    document.querySelector("#yes").addEventListener('click', ()=>{
+        let intrvl = setInterval(() => {
+            console.log("yoo, so you touched....", Date.now());
+        }, 1000);
+        document.querySelector("#no").addEventListener('click', () => {
+            clearInterval(intrvl);
+            console.log("okk, so stopped");
+        })
+    })
+    
+</script>
+
+</html>

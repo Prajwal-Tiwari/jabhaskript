@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: #808080;
+    }
+</style>
+<body>
+    <h1 id="heading">Click start to change the color randomly</h1>
+    <button id="strt">Start</button>
+    <h1  id="headin2">Click stop to confirm the color</h1>
+    <button id="stop">Stop</button>
+    <div class="footer"></div>
+</body>
+<script>
+    //first, generating random colors
+    const randomColor = ()=>{
+        const hex = "0123456789ABCDEF";
+        let color = "#";
+        for(let i=0; i<6; i++){
+            color +=hex[Math.floor(Math.random()*16)];
+        }
+        return color;
+    }
+    
+    document.querySelector('#strt').addEventListener('click',()=>{
+        let colornumber = '#808080';
+        const generator = setInterval(()=>{
+            colornumber = randomColor();
+            document.querySelector('body').style.background = colornumber;
+        }, );
+        document.querySelector('#stop').addEventListener('click',()=>{
+            clearInterval(generator);
+            console.log(colornumber);
+            document.querySelector('.footer').innerHTML = `<p>The color chosen is ${colornumber}</p>
+            <button type='submit' id = 'addtoFav'>Add to Favourite</button>
+            `;
+        document.querySelector('#addtoFav').addEventListener('click',async (e)=>{
+            
+        })
+        })
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,10 @@
+some random good colors:
+minimalist:
+#386E33
+light:
+#CCF5EB
+#D46780
+#655171
+dark:
+#063024
+#810013
